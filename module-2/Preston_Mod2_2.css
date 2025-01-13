@@ -1,0 +1,92 @@
+/* 
+    Name: Brian Preston
+    Class: CSD 340 - Web Development with HTML and CSS
+    Module: 2
+    Assignment: 2.2 - Building a Web Page Exercise, Part 2
+*/
+/* General styles */
+html, body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container styles */
+#container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* h1 styles */
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0056b3;
+}
+
+/* h2 styles */
+h2 {
+    font-weight: 500;
+    text-align: left;
+    padding-top: 15px;
+    color: #333;
+}
+
+/* Paragraph styles */
+p {
+    font-weight: 400;
+    line-height: 1.4em;
+    margin: 10px 0;
+}
+
+/* Intro paragraph styles */
+p.intro {
+    text-indent: 2em;
+}
+
+/* CSS sentence class */
+span.sentence {
+    font-style: italic;
+    font-weight: bold;
+    color: #c00;
+}
+
+/* Horizontal rule styles */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Address styles */
+address {
+    font-style: normal;
+    text-align: center;
+}
+
+/* Website URL styles */
+address a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+    background-color: #D6A800;
+}
+
+address a:visited {
+    color: #8B008B;
+    text-decoration: none;
+}
