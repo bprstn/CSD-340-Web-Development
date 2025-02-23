@@ -1,0 +1,68 @@
+<!-- 
+    Name: Brian Preston
+    Class: CSD 340 - Web Development with HTML and CSS
+    Assignment: 10.3 - JavaScript Part 2-SEASONS CHANGE
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        function changeImage(imgElement, newImage) {
+            imgElement.src = newImage;
+        }
+
+        function resetImage(imgElement, originalImage) {
+            imgElement.src = originalImage;
+        }
+    </script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .image-container {
+            margin: 20px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            border: 2px solid #000;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <div class="image-container">
+        <img id="image1" src="images/pic1.jpg" 
+            onmouseover="changeImage(this, 'images/pic2.jpg')" 
+            onmouseout="resetImage(this, 'images/pic1.jpg')" 
+            alt="Image 1">
+        <p>Hover your mouse over the image to change Fall to Winter.</p>
+    </div>
+
+    <div class="image-container">
+        <img id="image2" src="images/pic3.jpg" 
+            onmouseover="changeImage(this, 'images/pic4.jpg')" 
+            onmouseout="resetImage(this, 'images/pic3.jpg')" 
+            alt="Image 2">
+        <p>Hover your mouse over the image to change Spring to Summer.</p>
+    </div>
+
+</body>
+</html>
