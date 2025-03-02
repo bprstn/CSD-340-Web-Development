@@ -1,0 +1,93 @@
+<!-- Name: Brian Preston -->
+<!-- Class: CSD 340 - Web Development with HTML and CSS -->
+<!-- Assignment: 11.2 - JavaScript Part 3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #6A0DAD;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #4B0082;
+        }
+        #displayArea {
+            margin-top: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            min-width: 250px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <input type="text" id="textInput" placeholder="Enter an item">
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteLast()">Delete Last Entry</button>
+    <button onclick="displayList()">Display</button>
+
+    <div id="displayArea"></div>
+
+    <script>
+        let itemList = []; // Array to store user entries
+
+        function addItem() {
+            let input = document.getElementById("textInput").value;
+            if (input !== "") {
+                itemList.push(input);
+                alert(`Added: ${input}`);
+                document.getElementById("textInput").value = ""; // Clear input box
+            } else {
+                alert("Please enter a value before adding.");
+            }
+        }
+
+        function deleteLast() {
+            if (itemList.length > 0) {
+                let removedItem = itemList.pop();
+                alert(`Deleted: ${removedItem}`);
+            } else {
+                alert("No items left to delete.");
+            }
+        }
+
+        function displayList() {
+            let displayArea = document.getElementById("displayArea");
+            if (itemList.length > 0) {
+                displayArea.innerHTML = "<strong>Item List:</strong><br>";
+                itemList.forEach((item, index) => {
+                    displayArea.innerHTML += `${index + 1}. ${item} <br>`;
+                });
+            } else {
+                displayArea.innerHTML = "No items in the list.";
+            }
+        }
+    </script>
+
+</body>
+</html>

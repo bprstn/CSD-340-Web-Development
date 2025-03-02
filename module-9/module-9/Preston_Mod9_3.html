@@ -1,0 +1,94 @@
+<!-- 
+    Name: Brian Preston
+    Class: CSD 340 - Web Development with HTML and CSS
+    Assignment: 9.3 - JavaScript Part 1
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <!-- JavaScript Variables -->
+    <script>
+        var travelExperience = "eye-opening";
+        var cultures = "diverse";
+        var history = "rich";
+        var connection = "meaningful";
+    </script>
+
+    <style>
+        /* Grayscale Theme */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5; /* Light Gray */
+            color: #333; /* Dark Gray */
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Header */
+        h1 {
+            color: #222; /* Dark Gray */
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Button Container */
+        .button-container {
+            margin-top: 15px;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #444; /* Medium Gray */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #999; /* Lighter Gray on Hover */
+            color: black;
+        }
+
+        /* Span Styling */
+        span {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #666; /* Medium Gray */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <p>I grew up my entire childhood overseas, constantly moving from place to place. Experiencing different cultures at such a young age taught me one of life’s most valuable lessons—<span id="travelExperience">______</span>. While it was challenging to adapt to new environments, I believe it shaped me into someone who deeply values human connection and appreciates the <span id="cultures">______</span> diversity in people, traditions, and ways of life.</p>
+
+    <p>Living in different countries gave me the opportunity to witness the beauty of various cultures firsthand. I’ve seen how different societies celebrate their heritage, how <span id="history">______</span> history is preserved in architecture and traditions, and how language shapes communication. These experiences have made me adaptable, open-minded, and eager to learn from those around me.</p>
+
+    <p>One of the most meaningful aspects of my journey has been the relationships I’ve built along the way. Meeting people from all walks of life has reinforced my belief that, despite our differences, we share universal emotions—love, kindness, and the desire for <span id="connection">______</span>.</p>
+
+    <!-- Buttons to Fill in the Blanks -->
+    <div class="button-container">
+        <button onclick="document.getElementById('travelExperience').innerHTML = travelExperience">Reveal Word</button>
+        <button onclick="document.getElementById('cultures').innerHTML = cultures">Reveal Word</button>
+        <button onclick="document.getElementById('history').innerHTML = history">Reveal Word</button>
+        <button onclick="document.getElementById('connection').innerHTML = connection">Reveal Word</button>
+    </div>
+
+</body>
+</html>
+
